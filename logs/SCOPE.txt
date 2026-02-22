@@ -1,0 +1,87 @@
+project_root/
+
+├─ api/
+│   ├─ __init__.py
+│   ├─ base_api.py
+│   │   ├─ Module docstring: @module: api.base_api...
+│   │   ├─ Class BaseAPIClient: <no docstring>
+│   ├─ ezb_api.py
+│   │   ├─ Class EZBApi: ECB SDW REST API wrapper using wildcard series key.
+│   ├─ weather_api.py
+│   │   ├─ Module docstring: Module: weather_api...
+│   │   ├─ Class OpenMeteoDailyClient: Contract-driven client for Open-Meteo Daily API.
+├─ contracts/
+│   ├─ __init__.py
+│   ├─ base.py
+│   │   ├─ Module docstring: @module: contracts.base...
+│   │   ├─ Variable PROJECT_ROOT: 
+│   │   ├─ Variable LOGS_DIR: 
+│   │   ├─ Class ColumnDefinition: @class: ColumnDefinition
+│   │   ├─ Class SourceDefinition: @class: SourceDefinition
+│   │   ├─ Class DBTarget: @class: DBTarget
+│   │   ├─ Class ModelDefinition: @class: ModelDefinition
+│   │   ├─ Class TargetDefinition: @class: TargetDefinition
+│   │   ├─ Class Contract: @class: Contract
+│   ├─ calendar_contract.py
+│   │   ├─ Module docstring: @module: contracts.calendar_contract...
+│   │   ├─ Variable current_year: 
+│   │   ├─ Variable START_YEAR_OFFSET: 
+│   │   ├─ Variable END_YEAR_OFFSET: 2
+│   │   ├─ Variable CALENDAR_CONTRACT: 
+│   ├─ ezb_fx_contract.py
+│   │   ├─ Module docstring: @module: contracts.ezb_fx_contract...
+│   │   ├─ Variable EZB_FX_CONTRACT: 
+│   ├─ weather_daily_contract.py
+│   │   ├─ Module docstring: @module: contracts.weather_daily_contract...
+│   │   ├─ Variable WEATHER_DAILY_CONTRACT: 
+├─ db/
+│   ├─ __init__.py
+│   ├─ csv_writer.py
+│   │   ├─ Module docstring: @module: db.csv_writer...
+│   │   ├─ Function prepare_csv_dataframe: @function: prepare_csv_dataframe
+│   │   ├─ Function write_dataframe_to_csv: @function: write_dataframe_to_csv
+│   ├─ mssql.py
+│   │   ├─ Module docstring: @module: db.mssql...
+│   │   ├─ Function get_sqlalchemy_engine: @function: get_sqlalchemy_engine
+│   │   ├─ Function derive_source_id: @function: derive_source_id
+│   │   ├─ Function log_to_csv: @function: log_to_csv
+│   │   ├─ Function map_datatype: @function: map_datatype
+│   │   ├─ Function ensure_schema: @function: ensure_schema
+│   │   ├─ Function create_dim_source: @function: create_dim_source
+│   │   ├─ Function create_log_table: @function: create_log_table
+│   │   ├─ Function create_table_from_contract: @function: create_table_from_contract
+│   │   ├─ Function validate_table_columns: @function: validate_table_columns
+│   │   ├─ Function ensure_calendar_table: @function: ensure_calendar_table
+│   │   ├─ Function ensure_db_objects: @function: ensure_db_objects
+│   │   ├─ Function execute: @function: execute
+│   │   ├─ Function align_dataframe_to_contract: @function: align_dataframe_to_contract
+│   │   ├─ Function truncate_staging_table: @function: truncate_staging_table
+│   │   ├─ Function ensure_data_merge: @function: ensure_data_merge
+│   │   ├─ Function write_dataframe_to_sql_bulk: @function: write_dataframe_to_sql_bulk
+│   ├─ mssql_prep.py
+│   │   ├─ Module docstring: @module: db.mssql_prep...
+│   │   ├─ Function ensure_calendar_merge: @function: ensure_calendar_merge
+├─ db\ddl/
+│   ├─ create_calendar.sql
+│   ├─ merge_calendar.sql
+│   ├─ ufn_GetDates.sql
+├─ jobs/
+│   ├─ __init__.py
+│   ├─ ezb_fx.py
+│   │   ├─ Function run_ezb_fx: CSV-mode ETL for ECB FX rates, using wildcard API or mock mode.
+│   │   ├─ Function append_log: <no docstring>
+│   │   ├─ Function append_csv_dump_log: <no docstring>
+│   ├─ weather_daily.py
+│   │   ├─ Module docstring: @module: jobs.weather_daily...
+├─ logs/
+│   ├─ __init__.py
+│   ├─ ezb_fx.csv
+│   ├─ ezb_fx_data.csv
+│   ├─ log.py
+│   │   ├─ Module docstring: @module: logs.log...
+│   │   ├─ Function _write_log_csv: Low-level CSV writer for logging.
+│   │   ├─ Function log_execution: High-level logging function: prints + optional CSV.
+│   ├─ log_csv_dump.csv
+│   ├─ log_execution.csv
+│   ├─ weather_daily.csv
+│   ├─ weather_daily_data.csv

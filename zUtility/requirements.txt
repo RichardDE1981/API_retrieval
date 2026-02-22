@@ -1,0 +1,4 @@
+# Python 3.12
+pandas==3.0.0
+requests==2.32.5
+sqlalchemy==2.0.46
