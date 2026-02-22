@@ -14,16 +14,17 @@ This project provides a **quick and lightweight solution** for obtaining require
 
 ## Project Structure
 
+```
 project_root/
-├─ api/ # API clients for weather and ECB FX
-├─ contracts/ # Data contracts and schema definitions
-├─ db/ # Database operations and CSV export
-├─ db/ddl/ # Required SQL objects
-├─ jobs/ # ETL workflows (weather_daily, ezb_fx)
-├─ logs/ # Log files and CSV dumps
-├─ README.md # Project description
-└─ SCOPE.txt # script generated project scope
-
+├─ api/        # API clients for weather and ECB FX
+├─ contracts/  # Data contracts and schema definitions
+├─ db/         # Database operations and CSV export
+├─ db/ddl/     # Required SQL objects
+├─ jobs/       # ETL workflows (weather_daily, ezb_fx)
+├─ logs/       # Log files and CSV dumps
+├─ README.md   # Project description
+└─ SCOPE.txt   # script generated project scope
+```
 
 ## Scope
 For technical details of the project structure, see **SCOPE.txt**.  
