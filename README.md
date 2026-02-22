@@ -12,6 +12,17 @@ This project provides a **quick and lightweight solution** for obtaining require
 - Modular and contract-driven architecture.  
 - Logs ETL execution with optional CSV logging for traceability.  
 
+## Prerequisites / Installation
+
+This project requires Python 3.12 and a few packages to run the ETL jobs.
+
+Install the required packages using pip:
+
+```
+pip install openmeteo-requests
+pip install requests-cache retry-requests numpy pandas
+```
+
 ## Project Structure
 
 ```
