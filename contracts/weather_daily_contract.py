@@ -102,6 +102,7 @@ WEATHER_DAILY_CONTRACT = Contract(
         ],
         dbo_only=[
             ColumnDefinition("source_id", "int", nullable=False),
+            ColumnDefinition("city_id", "int", nullable=False),
             ColumnDefinition("load_dts", "datetime", nullable=False)
         ]
     )
